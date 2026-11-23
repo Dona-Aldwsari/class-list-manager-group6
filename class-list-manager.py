@@ -18,7 +18,16 @@ def search_name(names, name):
         return True
     else:
         return False
- 
+ # Written by: Yara Alqurun
+def sort_names(names):
+    return sorted(names)
+# Written by: Yara Alqurun
+def names_starting_with(names, letter):
+    result = []
+    for name in names:
+        if name.lower().startswith(letter.lower()):
+            result.append(name)
+    return result
 
  
 def main():
@@ -28,4 +37,6 @@ def main():
     # print("Number of names:", count_names(names))
     print("Number of names:", count_names(names))
     print("Is Lames in the list?", search_name(names, "Lames"))
+    print("Sorted names:", sort_names(names))
+    print("Names starting with Y:", names_starting_with(names, "Y"))
 main()
