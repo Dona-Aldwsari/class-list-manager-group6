@@ -6,7 +6,18 @@ names = ["Lames", "Layan", "Dona", "Yara",]
  
 # ===== Each student adds her function BELOW this line =====
  
- 
+# Written by: Lames Almarshad
+def count_names(names):
+    count = 0
+    for name in names:
+        count = count + 1
+    return count 
+ # Written by: Lames Almarshad
+def search_name(names, name):
+    if name in names:
+        return True
+    else:
+        return False
  
 
  
@@ -15,6 +26,6 @@ def main():
     print("Class list:", names)
     # Each student calls her function here, for example:
     # print("Number of names:", count_names(names))
- 
- 
+    print("Number of names:", count_names(names))
+    print("Is Lames in the list?", search_name(names, "Lames"))
 main()
